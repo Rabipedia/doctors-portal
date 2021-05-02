@@ -4,6 +4,8 @@ import Home from "./Components/Home/Home/Home";
 import Appointment from "./Components/Appointment/Appointment/Appointment";
 import { createContext, useState } from "react";
 import Login from "./Components/Login/Login/Login";
+import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
+import AddDoctor from "./Components/AddDoctor/AddDoctor";
 
 export const UserContext = createContext();
 
@@ -19,8 +21,14 @@ function App() {
           <Route path="/appointment">
             <Appointment />
           </Route>
+          <Route path="/dashboard/appointment">
+            <Dashboard/>
+          </Route>
           <Route path="/login">
             <Login/>
+          </Route>
+          <Route path='/addDoctor'>
+            <AddDoctor/>
           </Route>
         </Switch>
       </Router>
